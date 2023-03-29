@@ -27,9 +27,12 @@ npm install express body-parser cors pg prisma
 
 - Nodemon: biblioteca para reiniciar automaticamente o servidor sempre que houver alterações no código.
 - Concurrently: biblioteca para executar o servidor e o cliente simultaneamente.
-
 ```
 npm install nodemon concurrently --save-dev
+```
+- .env: contém as variáveis de ambiente que serão usadas na aplicação
+```
+npm install dotenv
 ```
 
 Obs.: A pasta node_modules está no arquivo .gitignore, portanto, é necessário executar o comando ```npm install ou yarn install``` para instalar as dependências antes de executar o projeto
