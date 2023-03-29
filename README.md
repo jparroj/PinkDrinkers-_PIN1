@@ -32,7 +32,7 @@ npm install express body-parser cors pg prisma
 npm install nodemon concurrently --save-dev
 ```
 
-Obs.: A pasta node_modules está no arquivo .gitignore, portanto, é necessário executar o comando npm install ou yarn install para instalar as dependências antes de executar o projeto
+Obs.: A pasta node_modules está no arquivo .gitignore, portanto, é necessário executar o comando ```npm install ou yarn install``` para instalar as dependências antes de executar o projeto
 
 #### Powered by: Lucas, Tobias, Breno, João
 
