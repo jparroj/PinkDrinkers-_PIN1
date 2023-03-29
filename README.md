@@ -1,16 +1,23 @@
-Dependências do cliente (frontend)
-react: para construir a interface do usuário
-react-dom: para renderizar a interface do usuário no navegador
-react-router-dom: para gerenciar as rotas no lado do cliente
-axios: para fazer solicitações HTTP para o servidor
+## Dependências
 
-Dependências do servidor (backend)
-express: para construir o servidor HTTP
-body-parser: para analisar as solicitações HTTP
-cors: para permitir solicitações HTTP de diferentes origens
-pg: para se conectar ao banco de dados PostgreSQL
-prisma: para definir e executar consultas ao banco de dados
+### Frontend (Cliente-View)
 
-Dependências de desenvolvimento
-nodemon: para reiniciar automaticamente o servidor sempre que houver alterações no código
-concurrently: para executar o servidor e o cliente simultaneamente
+- React: biblioteca JavaScript para construir interfaces de usuário.
+- React-DOM: biblioteca para renderizar a interface de usuário no navegador.
+- React-Router-DOM: biblioteca para gerenciar as rotas no lado do cliente.
+- Axios: biblioteca para fazer solicitações HTTP para o servidor.
+
+### Backend (Servidor-Server)
+
+- Express: framework JavaScript para construir o servidor HTTP.
+- Body-Parser: middleware para analisar as solicitações HTTP.
+- Cors: middleware para permitir solicitações HTTP de diferentes origens.
+- Pg: biblioteca para se conectar ao banco de dados PostgreSQL.
+- Prisma: ORM (Object-Relational Mapping) para definir e executar consultas ao banco de dados.
+
+### Desenvolvimento
+
+- Nodemon: biblioteca para reiniciar automaticamente o servidor sempre que houver alterações no código.
+- Concurrently: biblioteca para executar o servidor e o cliente simultaneamente.
+
+#### Powered by: Lucas, Tobias, Breno, João
