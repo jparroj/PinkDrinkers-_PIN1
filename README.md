@@ -77,6 +77,6 @@ Para iniciar o projeto Views, execute o seguinte comando na pasta do projeto:
 
 ## Para iniciar o projeto Server, execute o seguinte comando na pasta do projeto:
 
-``npm run dev```
+```npm run dev```
 
 ### #Em seguida, acesse o projeto no seu navegador no endereço http://localhost:3000/.
