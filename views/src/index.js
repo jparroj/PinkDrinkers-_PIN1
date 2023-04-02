@@ -1,9 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
 
-ReactDOM.render(
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
-    <h1>Olá, mundo!</h1>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <App />
+  </React.StrictMode>
 );

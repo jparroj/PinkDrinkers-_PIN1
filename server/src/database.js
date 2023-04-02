@@ -1,5 +1,6 @@
 const { PrismaClient } = require('@prisma/client'); // Importa o Prisma Client
 
+
 const prisma = new PrismaClient({
   // Configuração de conexão com o banco de dados
   datasources: {
