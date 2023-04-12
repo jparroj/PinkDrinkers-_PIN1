@@ -17,6 +17,7 @@ function Login() {
         console.log(email, password);
 
         try {
+            // Envia uma requisição POST para a rota /login com os dados de email e senha
             const response = await axios.post('http://localhost:3000/login',
                 JSON.stringify({ email, password }),
                 {
@@ -24,24 +25,32 @@ function Login() {
                 }
             );
 
+            // Exibe no console o objeto de resposta da requisição
             console.log(response.data);
+            // Define o usuário atual como o objeto de resposta da requisição
             setUser(response.data);
 
         } catch (error) {
+            // Verifica se ocorreu um erro na requisição
             if (!error?.response) {
+                // Exibe uma mensagem de erro genérica caso não tenha ocorrido um erro de resposta
                 setError('Erro ao acessar o servidor');
             } else if (error.response.status == 401) {
+                // Exibe uma mensagem de erro caso a resposta seja um erro de autenticação (status 401)
                 setError('Usuário ou senha inválidos');
             }
         }
-
     };
 
     const fazerLogout = async (e) => {
+        // Previne o comportamento padrão do evt de click 
         e.preventDefault();
+        // Define o usuário atual como null
         setUser(null);
-        setError('');
+        // Define a mensagem de erro atual como uma string vazia
+        setError('Não foi Possível realizar o Logout');
     };
+
 
     return (
 
@@ -49,27 +58,28 @@ function Login() {
 
             {user == null ? (
                 <div>
-                <div className="title-pai"> 
-            <div className="title1">
-            <span>P</span>
-            <span>I</span>
-            <span>N</span>
-            <span>K</span>
-              </div>
-              <div className="title2">
-            <span>D</span>
-            <span>R</span>
-            <span>I</span>
-            <span>N</span>
-            <span>K</span>
-            <span>E</span>
-            <span>R</span>
-            <span>S</span>
-              </div>
-              </div>
-                <div className='img-refri'/>
-               
-
+                           // Título da página
+                    <div className="title-pai">
+                        <div className="title1">
+                            <span>P</span>
+                            <span>I</span>
+                            <span>N</span>
+                            <span>K</span>
+                        </div>
+                        <div className="title2">
+                            <span>D</span>
+                            <span>R</span>
+                            <span>I</span>
+                            <span>N</span>
+                            <span>K</span>
+                            <span>E</span>
+                            <span>R</span>
+                            <span>S</span>
+                        </div>
+                    </div>
+                    // Imagem da página de login
+                    <div className='img-refri' />
+                    // Formulário de login
                     <form className='login-form'>
                         <h1>ACESSO</h1>
                         <div className='user-form'>
@@ -107,17 +117,18 @@ function Login() {
                         </div>
 
                     </form>
-
+                    // Mensagem de erro                 
                     <p>{error}</p>
 
                 </div>
             ) : (
+                // Página de boas-vindas
                 <div>
                     <h2>Olá, {user.name}</h2>
                     <button type="button"
                         className='btn-login'
                         onClick={(e) => fazerLogout(e)}>Logout</button>
-                        
+
                 </div>
             )}
         </div>
