@@ -12,7 +12,7 @@ router.get('/users', (req, res) =>{
 // Rota de autenticação
 router.post('/login', userController.login);
 
-//Rota de Criar Usuário
+//Rota de Criar Usuário- pagina de Cadastro
 router.post('/users', userController.createUser);
 
 

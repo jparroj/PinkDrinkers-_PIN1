@@ -3,7 +3,7 @@ const bodyParser = require('body-parser'); // Importa o middleware Body Parser
 const cors = require('cors'); // Importa o middleware CORS
 const routes = require('./routes'); // Importa as rotas do servidor
 require('dotenv').config();
-const { Pool } = require('pg')
+// const { Pool } = require('pg')
 
 
 const app = express(); // Cria uma instância do servidor Express
@@ -14,8 +14,8 @@ app.use(express.json());
 
 
 // Configuração de rotas
-app.use(routes); // Define o prefixo "/api" para todas as rotas definidas no arquivo "routes.js"
-app.get('/', (req, res) =>{
+app.use(routes); //linka com arquivo routes.js
+app.get('/', (req, res) =>{//test servidor
     res.send("SERVIDOR ON!");
 }); //
 

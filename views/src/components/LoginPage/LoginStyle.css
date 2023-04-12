@@ -1,0 +1,65 @@
+.img-refri {
+    position: absolute;
+    left: 153px;
+    bottom: 10px;
+    max-width: 100%;
+    margin-left: 95px;
+    background-image: url(refri.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 780px;
+}
+
+.login-form {
+    position: absolute;
+    left: 948px;
+    bottom: 277px;
+    width: 556px;
+    height: 406px;
+    background: rgba(237, 55, 68, 0.22);
+    border-radius: 60px;
+    box-sizing: border-box;
+    padding: 70px;
+    text-align: center;
+}
+h1{
+position: relative;
+top: -20%;
+font-family: 'Inter';
+font-style: italic;
+font-size: 50px;
+/* identical to box height */
+text-align: center;
+color: #400F12;
+font-variation-settings: 'slnt' -10;
+
+
+}
+.user-form {
+    position: relative;
+    top: -20%;
+    padding-bottom: 8.5px;
+
+}
+
+.senha-form {
+    position: relative;
+    top: -20%;
+    padding-top: 8.5px;
+}
+
+.label-email, .label-senha {
+  
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    color: #000000;
+    font-variation-settings: 'slnt' -10;
+
+
+}
+
+
