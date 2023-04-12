@@ -13,7 +13,7 @@
 
 .login-form {
     position: absolute;
-    left: 948px;
+    left: 980px;
     bottom: 277px;
     width: 556px;
     height: 406px;
@@ -21,21 +21,23 @@
     border-radius: 60px;
     box-sizing: border-box;
     padding: 70px;
+
+}
+
+h1 {
+    position: relative;
+    top: -20%;
+    font-family: 'Inter';
+    font-style: italic;
+    font-size: 50px;
+    /* identical to box height */
     text-align: center;
-}
-h1{
-position: relative;
-top: -20%;
-font-family: 'Inter';
-font-style: italic;
-font-size: 50px;
-/* identical to box height */
-text-align: center;
-color: #400F12;
-font-variation-settings: 'slnt' -10;
+    color: #400F12;
+    font-variation-settings: 'slnt' -10;
 
 
 }
+
 .user-form {
     position: relative;
     top: -20%;
@@ -47,19 +49,108 @@ font-variation-settings: 'slnt' -10;
     position: relative;
     top: -20%;
     padding-top: 8.5px;
+
 }
 
-.label-email, .label-senha {
-  
+.label-email,
+.label-senha {
+    position: relative;
+    bottom: 20px;
+    left: 2%;
     font-family: 'Inter';
     font-style: italic;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 25px;
+    font-weight: 550;
+    font-size: 20px;
+    line-height: 30px;
     color: #000000;
     font-variation-settings: 'slnt' -10;
 
 
 }
 
+.btn-entrarLogin {
+    position: relative;
+    bottom: 51px;
+    left: 30%;
+    width: 169.36px;
+    height: 62.96px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
 
+}
+
+.user-form input[type=usuario] {
+    position: relative;
+    top: -20px;
+    background: #FFFFFF;
+    border-radius: 60px;
+    width: 430.74px;
+    height: 40.47px;
+    padding-left: 20px;
+    /* Adiciona padding à esquerda */
+    box-sizing: border-box;
+    /* Mantém a largura do elemento mesmo com padding */
+}
+
+
+
+.senha-form input[type=senha] {
+    position: relative;
+    top: -20px;
+    background: #FFFFFF;
+    border-radius: 60px;
+    width: 430.74px;
+    padding-left: 20px;
+    /* Adiciona padding à esquerda */
+    box-sizing: border-box;
+    /* Mantém a largura do elemento mesmo com padding */
+    height: 40.47px;
+}
+
+
+
+.btn-entrarLogin:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    opacity: 0.8;
+}
+
+.title-pai {
+    position: relative;
+    left: 112%;
+}
+
+.title1 span:nth-child(1),
+.title1 span:nth-child(3),
+.title2 span:nth-child(1),
+.title2 span:nth-child(2),
+.title2 span:nth-child(4),
+.title2 span:nth-child(6),
+.title2 span:nth-child(7),
+.title2 span:nth-child(8) {
+    font-family: 'Jacques Francois Shadow';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 125px;
+    line-height: 165px;
+
+    color: #EB3743;
+}
+
+.title1 span:nth-child(2),
+.title1 span:nth-child(4),
+.title2 span:nth-child(3),
+.title2 span:nth-child(5) {
+    font-family: 'Londrina Solid';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 140px;
+    line-height: 166px;
+    width: 120px;
+    height: 145px;
+    color: rgba(235, 55, 67, 0.93);
+}

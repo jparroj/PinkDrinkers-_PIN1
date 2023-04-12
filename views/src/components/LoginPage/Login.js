@@ -49,7 +49,24 @@ function Login() {
 
             {user == null ? (
                 <div>
-              
+                <div className="title-pai"> 
+            <div className="title1">
+            <span>P</span>
+            <span>I</span>
+            <span>N</span>
+            <span>K</span>
+              </div>
+              <div className="title2">
+            <span>D</span>
+            <span>R</span>
+            <span>I</span>
+            <span>N</span>
+            <span>K</span>
+            <span>E</span>
+            <span>R</span>
+            <span>S</span>
+              </div>
+              </div>
                 <div className='img-refri'/>
                
 
@@ -100,6 +117,7 @@ function Login() {
                     <button type="button"
                         className='btn-login'
                         onClick={(e) => fazerLogout(e)}>Logout</button>
+                        
                 </div>
             )}
         </div>
