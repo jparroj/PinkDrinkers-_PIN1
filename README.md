@@ -50,3 +50,58 @@ Este é um servidor Node.js para uma aplicação web.
 ## Scripts
 
 - `dev`: Inicia o servidor em modo de desenvolvimento com o Nodemon
+
+
+# Views
+
+Views é um projeto de exemplo criado com React.
+
+## Instalação
+
+Para instalar o projeto, use o seguinte comando:
+
+```
+npm install
+```
+
+## Uso
+
+Para iniciar o servidor de desenvolvimento, use o seguinte comando:
+
+```
+npm start
+```
+
+A aplicação estará disponível em [http://localhost:3000](http://localhost:3000).
+
+## Dependências
+
+As principais dependências do projeto incluem:
+
+- "@testing-library/jest-dom": "^5.16.5": Biblioteca de utilitários de teste para interação com a DOM em testes de JavaScript.
+- "@testing-library/react": "^13.4.0": Biblioteca de utilitários de teste para componentes React.
+- "@testing-library/user-event": "^13.5.0": Biblioteca de utilitários de teste para simular eventos do usuário em testes de JavaScript.
+- "axios": "^1.3.4": Biblioteca para fazer requisições HTTP.
+- "react": "^18.2.0": Biblioteca JavaScript para construir interfaces de usuário.
+- "react-dom": "^18.2.0": Biblioteca para renderizar elementos React no DOM.
+- "react-scripts": "5.0.1": Conjunto de scripts de configuração para aplicações criadas com Create React App.
+- "web-vitals": "^2.1.4": Biblioteca para medir a performance de uma aplicação Web.
+
+## Scripts
+
+Os scripts disponíveis incluem:
+
+- "start": Inicia o servidor de desenvolvimento.
+- "build": Compila a aplicação para produção.
+- "test": Executa testes.
+- "eject": Ejeta o código de configuração do Create React App para customização avançada.
+
+## Configuração do ESLint
+
+O objeto "eslintConfig" configura o linter ESLint para o projeto. 
+"extends" especifica que o projeto segue as configurações padrão do Create React App.
+
+## Browsers suportados
+
+Por fim, "browserslist" especifica os navegadores que o projeto suporta. 
+No ambiente de desenvolvimento, a aplicação será executada no último Chrome, Firefox e Safari. 
