@@ -1,23 +1,34 @@
 ## PEGANDO A BRANCH
 
 # Clone o repositório
+```
 git clone https://github.com/seu-usuario/seu-repositorio.git
+```
 
 # Acesse o diretório do repositório
+```
 cd seu-repositorio
+```
 
 # Verifique as branches disponíveis
+```
 git branch
+```
 
 # Mude para a branch desejada
+```
 git checkout nome-da-branch
+```
 
 # Instale as dependências
+```
 npm install
+```
 
 # Rode o servidor
+```
 npm run dev
-
+```
 
 # Server
 
@@ -38,5 +49,4 @@ Este é um servidor Node.js para uma aplicação web.
 
 ## Scripts
 
-- `test`: Executa os testes da aplicação
 - `dev`: Inicia o servidor em modo de desenvolvimento com o Nodemon
