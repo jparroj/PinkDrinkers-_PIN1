@@ -17,11 +17,11 @@ module.exports = {
 
   async createUser(email, password) {
     try {
-      const hashedPassword = await bcrypt.hash(password, 10);
+      const hPassword = await bcrypt.hash(password, 10);
       const user = await prisma.user.create({
         data: {
           email,
-          password: hashedPassword,
+          password: hPassword,
         },
       });
       return user;
