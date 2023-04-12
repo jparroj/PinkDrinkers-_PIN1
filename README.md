@@ -1,41 +1,82 @@
+# Projeto Views
+
+Este é um projeto com a versão atual de 0.1.0 e é privado.
+
 ## Dependências
 
-### Frontend (Cliente-View)
+Este projeto utiliza as seguintes dependências:
 
-- React: biblioteca JavaScript para construir interfaces de usuário.
-- React-DOM: biblioteca para renderizar a interface de usuário no navegador.
-- React-Router-DOM: biblioteca para gerenciar as rotas no lado do cliente.
-- Axios: biblioteca para fazer solicitações HTTP para o servidor.
+- "@testing-library/jest-dom": "^5.16.5"
+- "@testing-library/react": "^13.4.0"
+- "@testing-library/user-event": "^13.5.0"
+- "axios": "^1.3.4"
+- "react": "^18.2.0"
+- "react-dom": "^18.2.0"
+- "react-scripts": "5.0.1"
+- "web-vitals": "^2.1.4"
 
-```
-npm install react react-dom react-router-dom axios
-```
+## Scripts
 
-### Backend (Servidor-Server)
+Este projeto utiliza os seguintes scripts:
 
-- Express: framework JavaScript para construir o servidor HTTP.
-- Body-Parser: middleware para analisar as solicitações HTTP.
-- Cors: middleware para permitir solicitações HTTP de diferentes origens.
-- Pg: biblioteca para se conectar ao banco de dados PostgreSQL.
-- Prisma: ORM (Object-Relational Mapping) para definir e executar consultas ao banco de dados.
+- "start": "react-scripts start"
+- "build": "react-scripts build"
+- "test": "react-scripts test"
+- "eject": "react-scripts eject"
 
-```
-npm install express body-parser cors pg prisma
-```
+## Configuração de ESLint
 
-### Desenvolvimento
+Este projeto utiliza as seguintes configurações de ESLint:
 
-- Nodemon: biblioteca para reiniciar automaticamente o servidor sempre que houver alterações no código.
-- Concurrently: biblioteca para executar o servidor e o cliente simultaneamente.
-```
-npm install nodemon concurrently --save-dev
-```
-- .env: contém as variáveis de ambiente que serão usadas na aplicação
-```
-npm install dotenv
-```
+- "extends": ["react-app", "react-app/jest"]
 
-Obs.: A pasta node_modules está no arquivo .gitignore, portanto, é necessário executar o comando ```npm install ou yarn install``` para instalar as dependências antes de executar o projeto
+## Browsers suportados
 
-#### Powered by: Lucas, Tobias, Breno, João
+Este projeto suporta os seguintes browsers:
 
+- "production": [">0.2%", "not dead", "not op_mini all"]
+- "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+
+# Projeto Server
+
+Este é um projeto com a versão atual de 1.0.0.
+
+## Dependências
+
+Este projeto utiliza as seguintes dependências:
+
+- "@prisma/client": "^4.12.0"
+- "bcrypt": "^5.1.0"
+- "bcryptjs": "^2.4.3"
+- "body-parser": "^1.20.2"
+- "cors": "^2.8.5"
+- "dotenv": "^16.0.3"
+- "express": "^4.18.2"
+- "nodemon": "^2.0.22"
+- "pg": "^8.10.0"
+- "prisma": "^4.12.0"
+
+## Scripts
+
+Este projeto utiliza os seguintes scripts:
+
+- "test": "echo "Error: no test specified" && exit 1"
+- "dev": "nodemon src/server.js"
+
+## Instalação das dependências
+
+Para instalar as dependências, é necessário ter o Node.js instalado em seu computador. Em seguida, execute o comando abaixo dentro de cada pasta do projeto:
+
+```npm install```
+
+## Fluxo básico
+
+Para iniciar o projeto Views, execute o seguinte comando na pasta do projeto:
+
+```npm start```
+
+## Para iniciar o projeto Server, execute o seguinte comando na pasta do projeto:
+
+```npm run dev```
+
+### #Em seguida, acesse o projeto no seu navegador no endereço http://localhost:3000/.
