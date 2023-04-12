@@ -1,82 +1,107 @@
-# Projeto Views
+## PEGANDO A BRANCH
 
-Este é um projeto com a versão atual de 0.1.0 e é privado.
+# Clone o repositório
+```
+git clone https://github.com/seu-usuario/seu-repositorio.git
+```
+
+# Acesse o diretório do repositório
+```
+cd seu-repositorio
+```
+
+# Verifique as branches disponíveis
+```
+git branch
+```
+
+# Mude para a branch desejada
+```
+git checkout nome-da-branch
+```
+
+# Instale as dependências
+```
+npm install
+```
+
+# Rode o servidor
+```
+npm run dev
+```
+
+# Server
+
+Este é um servidor Node.js para uma aplicação web.
 
 ## Dependências
 
-Este projeto utiliza as seguintes dependências:
-
-- "@testing-library/jest-dom": "^5.16.5"
-- "@testing-library/react": "^13.4.0"
-- "@testing-library/user-event": "^13.5.0"
-- "axios": "^1.3.4"
-- "react": "^18.2.0"
-- "react-dom": "^18.2.0"
-- "react-scripts": "5.0.1"
-- "web-vitals": "^2.1.4"
+- [@prisma/client](https://www.npmjs.com/package/@prisma/client) - ORM para comunicação com banco de dados
+- [bcrypt](https://www.npmjs.com/package/bcrypt) - Biblioteca para criptografia de senhas
+- [bcryptjs](https://www.npmjs.com/package/bcryptjs) - Alternativa ao `bcrypt` para ambientes com limitações de recursos
+- [body-parser](https://www.npmjs.com/package/body-parser) - Middleware para parsear o corpo de requisições HTTP
+- [cors](https://www.npmjs.com/package/cors) - Middleware para habilitar o CORS
+- [dotenv](https://www.npmjs.com/package/dotenv) - Biblioteca para carregar variáveis de ambiente a partir de um arquivo `.env`
+- [express](https://www.npmjs.com/package/express) - Framework para construção de aplicações web
+- [nodemon](https://www.npmjs.com/package/nodemon) - Monitor de mudanças de arquivos para reiniciar o servidor automaticamente
+- [pg](https://www.npmjs.com/package/pg) - Biblioteca para conexão com o PostgreSQL
+- [prisma](https://www.npmjs.com/package/prisma) - ORM para comunicação com banco de dados
 
 ## Scripts
 
-Este projeto utiliza os seguintes scripts:
+- `dev`: Inicia o servidor em modo de desenvolvimento com o Nodemon
 
-- "start": "react-scripts start"
-- "build": "react-scripts build"
-- "test": "react-scripts test"
-- "eject": "react-scripts eject"
 
-## Configuração de ESLint
+# Views
 
-Este projeto utiliza as seguintes configurações de ESLint:
+Views é um projeto de exemplo criado com React.
 
-- "extends": ["react-app", "react-app/jest"]
+## Instalação
+
+Para instalar o projeto, use o seguinte comando:
+
+```
+npm install
+```
+
+## Uso
+
+Para iniciar o servidor de desenvolvimento, use o seguinte comando:
+
+```
+npm start
+```
+
+A aplicação estará disponível em [http://localhost:3000](http://localhost:3000).
+
+## Dependências
+
+As principais dependências do projeto incluem:
+
+- "@testing-library/jest-dom": "^5.16.5": Biblioteca de utilitários de teste para interação com a DOM em testes de JavaScript.
+- "@testing-library/react": "^13.4.0": Biblioteca de utilitários de teste para componentes React.
+- "@testing-library/user-event": "^13.5.0": Biblioteca de utilitários de teste para simular eventos do usuário em testes de JavaScript.
+- "axios": "^1.3.4": Biblioteca para fazer requisições HTTP.
+- "react": "^18.2.0": Biblioteca JavaScript para construir interfaces de usuário.
+- "react-dom": "^18.2.0": Biblioteca para renderizar elementos React no DOM.
+- "react-scripts": "5.0.1": Conjunto de scripts de configuração para aplicações criadas com Create React App.
+- "web-vitals": "^2.1.4": Biblioteca para medir a performance de uma aplicação Web.
+
+## Scripts
+
+Os scripts disponíveis incluem:
+
+- "start": Inicia o servidor de desenvolvimento.
+- "build": Compila a aplicação para produção.
+- "test": Executa testes.
+- "eject": Ejeta o código de configuração do Create React App para customização avançada.
+
+## Configuração do ESLint
+
+O objeto "eslintConfig" configura o linter ESLint para o projeto. 
+"extends" especifica que o projeto segue as configurações padrão do Create React App.
 
 ## Browsers suportados
 
-Este projeto suporta os seguintes browsers:
-
-- "production": [">0.2%", "not dead", "not op_mini all"]
-- "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
-
-# Projeto Server
-
-Este é um projeto com a versão atual de 1.0.0.
-
-## Dependências
-
-Este projeto utiliza as seguintes dependências:
-
-- "@prisma/client": "^4.12.0"
-- "bcrypt": "^5.1.0"
-- "bcryptjs": "^2.4.3"
-- "body-parser": "^1.20.2"
-- "cors": "^2.8.5"
-- "dotenv": "^16.0.3"
-- "express": "^4.18.2"
-- "nodemon": "^2.0.22"
-- "pg": "^8.10.0"
-- "prisma": "^4.12.0"
-
-## Scripts
-
-Este projeto utiliza os seguintes scripts:
-
-- "test": "echo "Error: no test specified" && exit 1"
-- "dev": "nodemon src/server.js"
-
-## Instalação das dependências
-
-Para instalar as dependências, é necessário ter o Node.js instalado em seu computador. Em seguida, execute o comando abaixo dentro de cada pasta do projeto:
-
-```npm install```
-
-## Fluxo básico
-
-Para iniciar o projeto Views, execute o seguinte comando na pasta do projeto:
-
-```npm start```
-
-## Para iniciar o projeto Server, execute o seguinte comando na pasta do projeto:
-
-```npm run dev```
-
-### #Em seguida, acesse o projeto no seu navegador no endereço http://localhost:3000/.
+Por fim, "browserslist" especifica os navegadores que o projeto suporta. 
+No ambiente de desenvolvimento, a aplicação será executada no último Chrome, Firefox e Safari. 
