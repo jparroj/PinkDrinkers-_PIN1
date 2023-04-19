@@ -165,3 +165,7 @@ O código abaixo define as propriedades de estilo de fonte para os elementos que
     height: 145px;
     color: rgba(235, 55, 67, 0.93);
 }
+
+.titles{
+    position: relative; 
+}

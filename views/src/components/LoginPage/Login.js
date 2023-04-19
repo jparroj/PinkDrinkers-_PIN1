@@ -59,6 +59,7 @@ function Login() {
             {user == null ? (
                 <div>
                            // Título da página
+                           <div className="titles">
                     <div className="title-pai">
                         <div className="title1">
                             <span>P</span>
@@ -75,6 +76,7 @@ function Login() {
                             <span>E</span>
                             <span>R</span>
                             <span>S</span>
+                        </div>
                         </div>
                     </div>
                     // Imagem da página de login
