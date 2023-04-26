@@ -2,13 +2,13 @@
     /* Define a posição absoluta do elemento em relação à janela do navegador */
     position: absolute;
     /* Define a distância em pixels do elemento até a borda esquerda da janela do navegador */
-    left: 153px;
+    left: 8%;
     /* Define a distância em pixels do elemento até a borda inferior da janela do navegador */
-    bottom: 10px;
+    bottom: 1%;
     /* Define a largura máxima do elemento como 100% do elemento pai */
     max-width: 100%;
     /* Define a margem esquerda do elemento como 95px */
-    margin-left: 95px;
+    margin-left: 5%;
     /* Define a imagem de fundo do elemento */
     background-image: url(refri.png);
     /* Define o tamanho da imagem de fundo do elemento como 95% da largura do elemento */
@@ -20,11 +20,10 @@
     /* Define a altura do elemento como 780px */
     height: 780px;
 }
-
 .login-form {
     position: absolute;
     left: 980px;
-    bottom: 277px;
+    bottom: 245px;
     width: 556px;
     height: 406px;
     background: rgba(237, 55, 68, 0.22);
@@ -90,7 +89,7 @@ h1 {
     font-weight: 400;
     font-size: 25px;
     line-height: 30px;
-
+    border: 2px solid #FFFFFF;
 }
 
 .user-form input[type=usuario] {
@@ -104,6 +103,7 @@ h1 {
     /* Adiciona padding à esquerda */
     box-sizing: border-box;
     /* Mantém a largura do elemento mesmo com padding */
+    border: 2px solid #FFFFFF;
 }
 
 
@@ -119,6 +119,7 @@ h1 {
     box-sizing: border-box;
     /* Mantém a largura do elemento mesmo com padding */
     height: 40.47px;
+    border: 2px solid #FFFFFF;
 }
 
 
@@ -129,8 +130,10 @@ h1 {
 }
 
 .title-pai {
-    position: relative;
-    left: 112%;
+    position: absolute; 
+    top: 0%;
+    z-index: 1;
+    left :29%;
 }
 /*
 O código abaixo define as propriedades de estilo de fonte para os elementos que correspondem.
@@ -143,29 +146,37 @@ O código abaixo define as propriedades de estilo de fonte para os elementos que
 .title2 span:nth-child(6),
 .title2 span:nth-child(7),
 .title2 span:nth-child(8) {
-    font-family: 'Jacques Francois Shadow';
+    font-family: 'Jacques Francois Shadow', cursive;
     font-style: normal;
     font-weight: 400;
-    font-size: 125px;
+    font-size: 110px;
     line-height: 165px;
-
     color: #EB3743;
+    letter-spacing: 5px;
+  
 }
 
 .title1 span:nth-child(2),
 .title1 span:nth-child(4),
 .title2 span:nth-child(3),
 .title2 span:nth-child(5) {
-    font-family: 'Londrina Solid';
+    font-family: 'Londrina Solid', cursive;
     font-style: normal;
     font-weight: 400;
-    font-size: 140px;
-    line-height: 166px;
+    font-size: 116px;
+    line-height: 100px;
     width: 120px;
     height: 145px;
     color: rgba(235, 55, 67, 0.93);
-}
+    letter-spacing: 20px;
 
-.titles{
-    position: relative; 
 }
+.title1, .title2 {
+    margin-bottom: -40px; /* altere o valor para o espaço desejado */
+  }
+
+  .title2 {
+    position: RELATIVE; 
+    left: 21%;
+  }
+

@@ -58,8 +58,8 @@ function Login() {
 
             {user == null ? (
                 <div>
-                           // Título da página
-                           <div className="titles">
+                          
+                       
                     <div className="title-pai">
                         <div className="title1">
                             <span>P</span>
@@ -78,10 +78,10 @@ function Login() {
                             <span>S</span>
                         </div>
                         </div>
-                    </div>
-                    // Imagem da página de login
+                   
+          
                     <div className='img-refri' />
-                    // Formulário de login
+                  
                     <form className='login-form'>
                         <h1>ACESSO</h1>
                         <div className='user-form'>
@@ -119,7 +119,7 @@ function Login() {
                         </div>
 
                     </form>
-                    // Mensagem de erro                 
+                                  
                     <p>{error}</p>
 
                 </div>

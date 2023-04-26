@@ -21,13 +21,7 @@ app.get('/', (req, res) =>{//test servidor
 
 
 const port = process.env.SERVER_PORT || 5000; // Define a porta do servidor, lendo a variável de ambiente "PORT" ou usando a porta 5000 por padrão
-// const pool = new Pool({
-//   connectionString: 'postgres://postgres:postgres@localhost:5432/pin1'
-// })
-// pool.query('SELECT NOW()', (err, res) => {
-//   console.log(err, res)
-//   pool.end()
-// })
+
 
 // Inicialização do servidor
 app.listen(port, () => {
