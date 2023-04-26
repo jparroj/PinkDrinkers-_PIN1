@@ -13,12 +13,13 @@ function Login() {
 
     const fazerLogin = async (e) => {
         e.preventDefault();
+        
 
         console.log(email, password);
 
         try {
             // Envia uma requisição POST para a rota /login com os dados de email e senha
-            const response = await axios.post('http://localhost:3000/login',
+            const response = await axios.post('http://localhost:3001/login',
                 JSON.stringify({ email, password }),
                 {
                     headers: { 'Content-Type': 'application/json' }
@@ -29,6 +30,7 @@ function Login() {
             console.log(response.data);
             // Define o usuário atual como o objeto de resposta da requisição
             setUser(response.data);
+            
 
         } catch (error) {
             // Verifica se ocorreu um erro na requisição
@@ -105,7 +107,7 @@ function Login() {
                                 <label htmlFor="senha">SENHA</label>
                             </div>
 
-                            <input type="senha"
+                            <input type="password"
                                 name="senha"
                                 placeholder="Informe sua senha"
                                 required

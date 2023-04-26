@@ -1,11 +1,13 @@
 const express = require('express'); // Importa o framework Express
 const router = express.Router(); // Cria uma instância do roteador do Express
 const userController = require('./controller/UserController'); // Importa o controlador do usuário se for criar o controlador do usuário
+const { user } = require('./database');
+const User = require('./model/User');
 
 
 // Rotas de usuário
 router.get('/users', (req, res) =>{
-    res.send('Listagem de usuários');
+    res.send(User.getUserByEmail);
   });
 
 
