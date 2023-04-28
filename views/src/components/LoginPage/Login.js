@@ -30,7 +30,7 @@ function Login() {
             console.log(response.data);
             // Define o usuário atual como o objeto de resposta da requisição
             setUser(response.data);
-            
+          
 
         } catch (error) {
             // Verifica se ocorreu um erro na requisição
@@ -45,12 +45,18 @@ function Login() {
     };
 
     const fazerLogout = async (e) => {
-        // Previne o comportamento padrão do evt de click 
+        
         e.preventDefault();
-        // Define o usuário atual como null
-        setUser(null);
-        // Define a mensagem de erro atual como uma string vazia
-        setError('Não foi Possível realizar o Logout');
+        try{
+            
+      
+
+        
+
+        }catch(e){
+            setUser(null);
+        }
+        
     };
 
 
