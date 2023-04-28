@@ -1,6 +1,8 @@
 import axios from 'axios';//biblioteca para fazer requisições HTTP em JavaScript
 import { useState } from 'react';//é um hook do React que permite gerenciar estados em componentes 
 
+
+
 function Login() {
     // componente em React que representa uma tela de login
     // useState é um hook do React que permite que você adicione o estado a um componente
@@ -30,14 +32,13 @@ function Login() {
             console.log(response.data);
             // Define o usuário atual como o objeto de resposta da requisição
             setUser(response.data);
-          
 
         } catch (error) {
             // Verifica se ocorreu um erro na requisição
             if (!error?.response) {
                 // Exibe uma mensagem de erro genérica caso não tenha ocorrido um erro de resposta
                 setError('Erro ao acessar o servidor');
-            } else if (error.response.status == 401) {
+            } else if (error.response.status === 401) {
                 // Exibe uma mensagem de erro caso a resposta seja um erro de autenticação (status 401)
                 setError('Usuário ou senha inválidos');
             }
@@ -45,25 +46,18 @@ function Login() {
     };
 
     const fazerLogout = async (e) => {
-        
         e.preventDefault();
-        try{
-            
-      
-
-        
-
-        }catch(e){
-            setUser(null);
+        try {
+          setUser(null);
+        } catch (e) {
+          setUser(null);
         }
-        
-    };
+      };
 
 
     return (
-
         <div className="login-form-wrap">
-
+       
             {user == null ? (
                 <div>
                           
