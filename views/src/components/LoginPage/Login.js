@@ -1,6 +1,6 @@
 import axios from 'axios';//biblioteca para fazer requisições HTTP em JavaScript
 import { useState } from 'react';//é um hook do React que permite gerenciar estados em componentes 
-
+import { useNavigate } from 'react-router-dom';
 
 
 function Login() {
@@ -12,26 +12,33 @@ function Login() {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [user, setUser] = useState(null);
+    const navigate = useNavigate();
 
     const fazerLogin = async (e) => {
         e.preventDefault();
-        
-
+    
         console.log(email, password);
 
         try {
-            // Envia uma requisição POST para a rota /login com os dados de email e senha
-            const response = await axios.post('http://localhost:3001/login',
-                JSON.stringify({ email, password }),
-                {
-                    headers: { 'Content-Type': 'application/json' }
-                }
-            );
+          
+            const response = await axios.post('http://localhost:3001/login', {
+                email,
+                password,
+            });
+
+            setUser(response.data.user);
 
             // Exibe no console o objeto de resposta da requisição
             console.log(response.data);
             // Define o usuário atual como o objeto de resposta da requisição
+
             setUser(response.data);
+
+            // Armazena o token JWT e o refresh token no local storage
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('refreshToken', response.data.refreshToken);
+          
+            navigate('/home');
 
         } catch (error) {
             // Verifica se ocorreu um erro na requisição
@@ -47,21 +54,19 @@ function Login() {
 
     const fazerLogout = async (e) => {
         e.preventDefault();
-        try {
-          setUser(null);
-        } catch (e) {
-          setUser(null);
-        }
-      };
+        // Remove o token JWT e o refresh token do local storage
+        localStorage.removeItem('token');
+        localStorage.removeItem('refreshToken');
+    };
 
 
     return (
         <div className="login-form-wrap">
-       
+
             {user == null ? (
                 <div>
-                          
-                       
+
+
                     <div className="title-pai">
                         <div className="title1">
                             <span>P</span>
@@ -79,11 +84,11 @@ function Login() {
                             <span>R</span>
                             <span>S</span>
                         </div>
-                        </div>
-                   
-          
+                    </div>
+
+
                     <div className='img-refri' />
-                  
+
                     <form className='login-form'>
                         <h1>ACESSO</h1>
                         <div className='user-form'>
@@ -121,7 +126,7 @@ function Login() {
                         </div>
 
                     </form>
-                                  
+
                     <p>{error}</p>
 
                 </div>

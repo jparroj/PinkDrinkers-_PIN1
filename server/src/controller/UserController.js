@@ -2,6 +2,7 @@
 const prisma = require('../database');
 const bcrypt = require('bcrypt');
 const User = require('../model/User');
+const jwt = require('jsonwebtoken');
 
 
 // Controlador para login de usuário
@@ -9,7 +10,7 @@ exports.login = async (req, res) => {
   // Extrai email e senha do corpo da requisição
   const { email, password } = req.body;
   // Busca o usuário no banco de dados pelo email
-  const user = await prisma.user.findUnique({ where: { email } });
+  const user = await User.getUserByEmail(email);
 
   // Verifica se o usuário foi encontrado
   if (!user) {
@@ -23,9 +24,11 @@ exports.login = async (req, res) => {
   if (!passwordEqual) {
     return res.status(400).json({ error: 'Senha incorreta.' });
   }
+  // Cria um token JWT com o ID do usuário
+  const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
-  // Retorna os dados do usuário
-  return res.json({ user });
+  // Retorna os dados do usuário e o token JWT
+  return res.json({ user, token });
 };
 
 // Controlador para criação de usuário
@@ -36,6 +39,7 @@ exports.createUser = async (req, res) => {
   try {
     // Chama o método estático createUser do model de usuário para criar o usuário no banco de dados
     const user = await User.createUser(email, password);
+    const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
     // Retorna a resposta com mensagem de sucesso e dados do usuário
     res.status(201).json(
       { message: 'Usuário criado com sucesso!', user });
@@ -46,3 +50,4 @@ exports.createUser = async (req, res) => {
       { message: 'Erro ao criar usuário!' });
   }
 };
+
