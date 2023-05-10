@@ -1,20 +1,26 @@
 import Logo from './logoDrinker.png';
 import './HomePageStyle.css';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import { supabase } from '@supabase/supabase-js';
+
+
 
 function HomePage({ isAuthenticated }) {
 
     const navigate = useNavigate();
-    const handleLogout = (e) => {
-        e.preventDefault();
-        // Remove o token JWT e o refresh token do local storage
-        localStorage.removeItem('token');
-        localStorage.removeItem('refreshToken');
-        // Implemente o código para fazer logout aqui
+    const handleLogout = async (e) => {
+      e.preventDefault();
+    try {
+        await axios.post('/logout');
+        // Redireciona o usuário para a página de login
         navigate('/login');
         console.log('Logout realizado com sucesso!');
-
-    };
+    } catch (error) {
+        // Em caso de erro, exibe a mensagem de erro no console
+        console.error(error);
+    }
+};
 
     return (
         <div className="home-wrap">

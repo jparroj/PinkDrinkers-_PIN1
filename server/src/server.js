@@ -3,7 +3,7 @@ const bodyParser = require('body-parser'); // Importa o middleware Body Parser
 const cors = require('cors'); // Importa o middleware CORS
 const routes = require('./routes'); // Importa as rotas do servidor
 require('dotenv').config();
-// const { Pool } = require('pg')
+
 
 
 const app = express(); // Cria uma instância do servidor Express
