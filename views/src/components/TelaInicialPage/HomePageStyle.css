@@ -13,6 +13,7 @@ header{
   align-items: center;
   height: 100px;
   border-bottom: 1px solid #DC4F22;
+  box-sizing: border-box;
 
 }  
 
@@ -25,3 +26,32 @@ header{
   display: flex;
   justify-content: space-between;
 }
+
+a[href='https://www.w3schools.com'] {
+  /* estilos aqui */
+}
+
+a[href='https://developer.mozilla.org/pt-BR/'] {
+  /* estilos aqui */
+}
+
+a[href='https://github.com/'] {
+  /* estilos aqui */
+}
+
+a[href='Sair'] {
+  /* estilos aqui */
+  position: relative;
+  left: 60vw;
+  font-size: 1.2em; /* tamanho do ícone */
+}
+/* Vector */
+a[href='Sair'] .icon {
+  background-image: url(Vector.png);
+  background-size: 90%;
+  background-color: #0025FF;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em;
+}
+

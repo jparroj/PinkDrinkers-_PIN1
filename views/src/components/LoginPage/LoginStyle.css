@@ -221,7 +221,7 @@ h1 {
 .senha-form, .user-form {
     position: relative;
     padding: 1.5%;
-    top: -13%;
+    top: -1%;
 }
 
 .login-form {

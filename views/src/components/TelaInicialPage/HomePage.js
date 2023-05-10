@@ -1,14 +1,19 @@
 import Logo from './logoDrinker.png';
-
 import './HomePageStyle.css';
-
+import { useNavigate } from 'react-router-dom';
 
 function HomePage({ isAuthenticated }) {
 
-
-    const handleLogout = () => {
+    const navigate = useNavigate();
+    const handleLogout = (e) => {
+        e.preventDefault();
+        // Remove o token JWT e o refresh token do local storage
+        localStorage.removeItem('token');
+        localStorage.removeItem('refreshToken');
         // Implemente o código para fazer logout aqui
+        navigate('/login');
         console.log('Logout realizado com sucesso!');
+
     };
 
     return (
@@ -25,7 +30,12 @@ function HomePage({ isAuthenticated }) {
                     <a href='https://www.w3schools.com'>HOME</a>
                     <a href='https://developer.mozilla.org/pt-BR/'>GERENCIAR</a>
                     <a href='https://github.com/'>SOLICITAÇÕES</a>
-                    <a href="#" onClick={handleLogout}>Sair</a>
+                    <a href="Sair" onClick={handleLogout}>
+                        <span className="icon"></span>
+                        Sair
+                    </a>
+
+
 
                 </nav>
 

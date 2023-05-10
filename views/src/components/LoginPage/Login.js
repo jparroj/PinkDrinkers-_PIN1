@@ -57,6 +57,7 @@ function Login() {
         // Remove o token JWT e o refresh token do local storage
         localStorage.removeItem('token');
         localStorage.removeItem('refreshToken');
+     
     };
 
 
