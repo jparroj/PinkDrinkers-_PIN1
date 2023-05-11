@@ -3,7 +3,7 @@ const bodyParser = require('body-parser'); // Importa o middleware Body Parser
 const cors = require('cors'); // Importa o middleware CORS
 const routes = require('./routes'); // Importa as rotas do servidor
 require('dotenv').config();
-// const { Pool } = require('pg')
+
 
 
 const app = express(); // Cria uma instância do servidor Express
@@ -21,13 +21,7 @@ app.get('/', (req, res) =>{//test servidor
 
 
 const port = process.env.SERVER_PORT || 5000; // Define a porta do servidor, lendo a variável de ambiente "PORT" ou usando a porta 5000 por padrão
-// const pool = new Pool({
-//   connectionString: 'postgres://postgres:postgres@localhost:5432/pin1'
-// })
-// pool.query('SELECT NOW()', (err, res) => {
-//   console.log(err, res)
-//   pool.end()
-// })
+
 
 // Inicialização do servidor
 app.listen(port, () => {
