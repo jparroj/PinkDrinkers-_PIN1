@@ -153,22 +153,24 @@ O código abaixo define as propriedades de estilo de fonte para os elementos que
 }
 
 .img-refri {
+
     /* Define a posição absoluta do elemento em relação à janela do navegador */
     position: relative;
     /* Define a largura máxima do elemento como 100% do elemento pai */
     max-width: 100%;
     margin: 0 auto;
     /* Define a imagem de fundo do elemento */
-    background-image: url(refri.png);
+    background-image: url(../util/refri.png);
     /* Define o tamanho da imagem de fundo do elemento como 95% da largura do elemento */
-    background-size: 90%;
+    background-size: 100%;
     /* Define que a imagem de fundo do elemento não deve ser repetida */
     background-repeat: no-repeat;
     width: 28vw;
     height: 40vw;
     right: 55%;
-    margin-top: -16%;
-    transition: all 0.5s ease-in-out;
+    margin-top: -12%;
+
+    
 }
 
  @media (max-width: 1100px) {

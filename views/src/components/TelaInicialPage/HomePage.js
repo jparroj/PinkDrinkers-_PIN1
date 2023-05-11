@@ -1,53 +1,70 @@
-import Logo from './logoDrinker.png';
+
 import './HomePageStyle.css';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { supabase } from '@supabase/supabase-js';
+import Header from '../Header/Header';
+
 
 
 
 function HomePage({ isAuthenticated }) {
 
     const navigate = useNavigate();
-    const handleLogout = async (e) => {
-      e.preventDefault();
-    try {
-        await axios.post('/logout');
-        // Redireciona o usuário para a página de login
-        navigate('/login');
-        console.log('Logout realizado com sucesso!');
-    } catch (error) {
-        // Em caso de erro, exibe a mensagem de erro no console
-        console.error(error);
-    }
-};
+    // const handleLogout = async (e) => {
+    //     e.preventDefault();
+    //     try {
+    //         await axios.post('http://localhost:3001/logout');
+    //         // Redireciona o usuário para a página de login
+    //         navigate('/login');
+    //         console.log('Logout realizado com sucesso!');
+    //     } catch (error) {
+    //         // Em caso de erro, exibe a mensagem de erro no console
+    //         console.error(error);
+    //     }
+    // };
+    const gerenciarMaqMenu = async (e) => {
+        e.preventDefault();
+        navigate('/gerenciar-maquina');
+    };
+
+    const relatorioMenu = async (e) => {
+        e.preventDefault();
+        navigate('/relatorio');
+    };
+
+
+    const gerenciarEstoqueMenu = async (e) => {
+        e.preventDefault();   
+        navigate('/cadastro-produto');
+    };
 
     return (
         <div className="home-wrap">
-
-            <header className="header">
-
-                <img src={Logo} alt="Logo" className="logo" />
-                <div>
-                    Olá, Lucas
+             <Header/>
+            <div className="title-home">
+                <div className="titleHome1">
+                    <span>
+                        Um time de
+                        <span class="destaque"> sucesso </span>
+                        levando</span>
                 </div>
+                <div className="titleHome2">
+                    <span>as</span>
+                    <span class="destaque"> melhores bebidas</span>
+                    <span> até </span>
+                    <span class="destaque">você!</span>
+                </div>
+            </div>
+            <div className="buttons">
+                <input type="button" value="GERENCIAR MÁQUINAS" className="maquinas-button" 
+                onClick={(e) =>gerenciarMaqMenu(e)}/>
+                <input type="button" value="RELATÓRIOS" className="relatorios-button"  
+                onClick={(e) =>relatorioMenu(e)}/>
+                <input type="button" value="GERENCIAR ESTOQUE" className="estoque-button" 
+                onClick={(e) =>gerenciarEstoqueMenu(e)}/>
+            </div>
 
-                <nav className="nav">
-                    <a href='https://www.w3schools.com'>HOME</a>
-                    <a href='https://developer.mozilla.org/pt-BR/'>GERENCIAR</a>
-                    <a href='https://github.com/'>SOLICITAÇÕES</a>
-                    <a href="Sair" onClick={handleLogout}>
-                        <span className="icon"></span>
-                        Sair
-                    </a>
-
-
-
-                </nav>
-
-            </header>
-
-
+            <div className='img-refrigerante' />
         </div>
     );
 }

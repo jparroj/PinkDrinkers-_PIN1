@@ -1,7 +1,5 @@
-// Importa o Prisma, o bcrypt e o modelo de usuário
-const prisma = require('../database');
-
-const User = require('../model/Auth');
+const { supabase } = require('../database');
+const user = require('../model/Auth');
 
 
 // Controlador para login de usuário
@@ -12,19 +10,19 @@ exports.login = async (req, res) => {
 
   try {
     // Faz o login do usuário usando o Supabase
-    const { user, error } = await supabase.auth.signIn({
+
+    const { user, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
-
-    // Verifica se ocorreu algum erro durante o login
+    // Verifica se ocorreu arslgum erro durante o login
     if (error) {
       throw new Error('Falha ao fazer login: ' + error.message);
     }
 
     // Cria um token JWT com o ID do usuário
     const token = user && (await user.getIdToken());
-
+ 
     // Retorna os dados do usuário e o token JWT
     return res.json({ user, token });
   } catch (error) {

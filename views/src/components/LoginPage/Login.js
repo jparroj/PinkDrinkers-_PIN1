@@ -21,9 +21,20 @@ function Login() {
         console.log(email, password);
 
         try {
-          
-            await axios.post('/login');
         
+            const response = await axios.post('http://localhost:3001/login', {
+                email,
+                password,
+            });
+
+            setUser(response.data.user);
+
+            // Exibe no console o objeto de resposta da requisição
+            console.log(response.data);
+            // Define o usuário atual como o objeto de resposta da requisição
+
+            setUser(response.data);
+            
               if (error) {
                 setError('Usuário ou senha inválidos');
                 return;
@@ -63,6 +74,7 @@ function Login() {
                 <div>
 
 
+
                     <div className="title-pai">
                         <div className="title1">
                             <span>P</span>
@@ -81,7 +93,6 @@ function Login() {
                             <span>S</span>
                         </div>
                     </div>
-
 
                     <div className='img-refri' />
 
