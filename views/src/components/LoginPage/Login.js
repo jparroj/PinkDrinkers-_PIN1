@@ -3,6 +3,7 @@ import { useState } from 'react';//é um hook do React que permite gerenciar est
 import { useNavigate } from 'react-router-dom';
 
 
+
 function Login() {
     // componente em React que representa uma tela de login
     // useState é um hook do React que permite que você adicione o estado a um componente
@@ -20,7 +21,7 @@ function Login() {
         console.log(email, password);
 
         try {
-          
+        
             const response = await axios.post('http://localhost:3001/login', {
                 email,
                 password,
@@ -33,12 +34,17 @@ function Login() {
             // Define o usuário atual como o objeto de resposta da requisição
 
             setUser(response.data);
-
-            // Armazena o token JWT e o refresh token no local storage
-            localStorage.setItem('token', response.data.token);
-            localStorage.setItem('refreshToken', response.data.refreshToken);
-          
-            navigate('/home');
+            
+              if (error) {
+                setError('Usuário ou senha inválidos');
+                return;
+              }
+        
+              // Armazena o token JWT e o refresh token no local storage
+              localStorage.setItem('token', user?.session?.access_token);
+              localStorage.setItem('refreshToken', user?.session?.refresh_token);
+        
+              navigate('/home');
 
         } catch (error) {
             // Verifica se ocorreu um erro na requisição
@@ -68,6 +74,7 @@ function Login() {
                 <div>
 
 
+
                     <div className="title-pai">
                         <div className="title1">
                             <span>P</span>
@@ -86,7 +93,6 @@ function Login() {
                             <span>S</span>
                         </div>
                     </div>
-
 
                     <div className='img-refri' />
 
