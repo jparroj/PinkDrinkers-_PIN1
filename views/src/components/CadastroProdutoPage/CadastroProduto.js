@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-
 import Header from '../Header/Header';
 import iconeVoltar from './iconeVoltar.png';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import './CadastroProdutoStyle.css';
+
 
 
 function CadastroProduto() {
@@ -60,13 +61,13 @@ function CadastroProduto() {
             <div className='input-imagem'>
 
             </div>
-            <input type="file" accept="image/*" />
+            <input type="file" accept="image/*"  required/>
           </div>
           <div className='categoria-field-form'>
             <div className='label-categoria'>
               <label htmlFor="categoria">CATEGORIA</label>
             </div>
-            <select value={selectedOption} onChange={handleSelectChange}>
+            <select value={selectedOption} onChange={handleSelectChange}  required>
               <option value="opcao1">Categoria 1</option>
               <option value="opcao2">Categoria 2</option>
               <option value="opcao3">Categoria 3</option>
@@ -77,7 +78,7 @@ function CadastroProduto() {
             <button type="submit"
               className='btn-confirmar'>
              </button>
-
+             <input type="button" value="CONFIRMAR" className="confirmar-button"/>
           </div>
         </div>
       </form>
