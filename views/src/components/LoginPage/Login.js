@@ -1,5 +1,8 @@
 import axios from 'axios';//biblioteca para fazer requisições HTTP em JavaScript
 import { useState } from 'react';//é um hook do React que permite gerenciar estados em componentes 
+import { useNavigate } from 'react-router-dom';
+
+
 
 function Login() {
     // componente em React que representa uma tela de login
@@ -10,32 +13,45 @@ function Login() {
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
     const [user, setUser] = useState(null);
+    const navigate = useNavigate();
 
     const fazerLogin = async (e) => {
         e.preventDefault();
-
+    
         console.log(email, password);
 
         try {
-            // Envia uma requisição POST para a rota /login com os dados de email e senha
-            const response = await axios.post('http://localhost:3000/login',
-                JSON.stringify({ email, password }),
-                {
-                    headers: { 'Content-Type': 'application/json' }
-                }
-            );
+        
+            const response = await axios.post('http://localhost:3001/login', {
+                email,
+                password,
+            });
+
+            setUser(response.data.user);
 
             // Exibe no console o objeto de resposta da requisição
             console.log(response.data);
             // Define o usuário atual como o objeto de resposta da requisição
+
             setUser(response.data);
+            
+              if (error) {
+                setError('Usuário ou senha inválidos');
+                return;
+              }
+        
+              // Armazena o token JWT e o refresh token no local storage
+              localStorage.setItem('token', user?.session?.access_token);
+              localStorage.setItem('refreshToken', user?.session?.refresh_token);
+        
+              navigate('/home');
 
         } catch (error) {
             // Verifica se ocorreu um erro na requisição
             if (!error?.response) {
                 // Exibe uma mensagem de erro genérica caso não tenha ocorrido um erro de resposta
                 setError('Erro ao acessar o servidor');
-            } else if (error.response.status == 401) {
+            } else if (error.response.status === 401) {
                 // Exibe uma mensagem de erro caso a resposta seja um erro de autenticação (status 401)
                 setError('Usuário ou senha inválidos');
             }
@@ -43,22 +59,22 @@ function Login() {
     };
 
     const fazerLogout = async (e) => {
-        // Previne o comportamento padrão do evt de click 
         e.preventDefault();
-        // Define o usuário atual como null
-        setUser(null);
-        // Define a mensagem de erro atual como uma string vazia
-        setError('Não foi Possível realizar o Logout');
+        // Remove o token JWT e o refresh token do local storage
+        localStorage.removeItem('token');
+        localStorage.removeItem('refreshToken');
+     
     };
 
 
     return (
-
         <div className="login-form-wrap">
 
             {user == null ? (
                 <div>
-                           // Título da página
+
+
+
                     <div className="title-pai">
                         <div className="title1">
                             <span>P</span>
@@ -77,9 +93,9 @@ function Login() {
                             <span>S</span>
                         </div>
                     </div>
-                    // Imagem da página de login
+
                     <div className='img-refri' />
-                    // Formulário de login
+
                     <form className='login-form'>
                         <h1>ACESSO</h1>
                         <div className='user-form'>
@@ -103,7 +119,7 @@ function Login() {
                                 <label htmlFor="senha">SENHA</label>
                             </div>
 
-                            <input type="senha"
+                            <input type="password"
                                 name="senha"
                                 placeholder="Informe sua senha"
                                 required
@@ -117,7 +133,7 @@ function Login() {
                         </div>
 
                     </form>
-                    // Mensagem de erro                 
+
                     <p>{error}</p>
 
                 </div>

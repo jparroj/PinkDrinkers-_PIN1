@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;1,100;1,600&family=Roboto:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;1,100;1,600&family=Roboto:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Jacques+Francois+Shadow&display=swap');
 
 body {
   background: rgba(252, 238, 191, 1);
   display: flex;
+  
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Londrina Solid',
-  'Jacques Francois Shadow', sans-serif,;
+  'Jacques Francois Shadow', 'Inter', sans-serif,;
 }
+/* Use a fonte Noto Sans */

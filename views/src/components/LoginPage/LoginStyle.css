@@ -1,137 +1,10 @@
-.img-refri {
-    /* Define a posição absoluta do elemento em relação à janela do navegador */
-    position: absolute;
-    /* Define a distância em pixels do elemento até a borda esquerda da janela do navegador */
-    left: 153px;
-    /* Define a distância em pixels do elemento até a borda inferior da janela do navegador */
-    bottom: 10px;
-    /* Define a largura máxima do elemento como 100% do elemento pai */
-    max-width: 100%;
-    /* Define a margem esquerda do elemento como 95px */
-    margin-left: 95px;
-    /* Define a imagem de fundo do elemento */
-    background-image: url(refri.png);
-    /* Define o tamanho da imagem de fundo do elemento como 95% da largura do elemento */
-    background-size: 95%;
-    /* Define que a imagem de fundo do elemento não deve ser repetida */
-    background-repeat: no-repeat;
-    /* Define a largura do elemento como 500px */
-    width: 500px;
-    /* Define a altura do elemento como 780px */
-    height: 780px;
-}
-
-.login-form {
-    position: absolute;
-    left: 980px;
-    bottom: 277px;
-    width: 556px;
-    height: 406px;
-    background: rgba(237, 55, 68, 0.22);
-    border-radius: 60px;
-    box-sizing: border-box;
-    padding: 70px;
-
-}
-
-h1 {
-    position: relative;
-    top: -20%;
-    font-family: 'Inter';
-    font-style: italic;
-    font-size: 50px;
-    text-align: center;
-    color: #400F12;
-    font-variation-settings: 'slnt' -10;
-
-
-}
-
-.user-form {
-    position: relative;
-    top: -20%;
-    padding-bottom: 8.5px;
-
-}
-
-.senha-form {
-    position: relative;
-    top: -20%;
-    padding-top: 8.5px;
-
-}
-
-.label-email,
-.label-senha {
-    position: relative;
-    bottom: 20px;
-    left: 2%;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 550;
-    font-size: 20px;
-    line-height: 30px;
-    color: #000000;
-    font-variation-settings: 'slnt' -10;
-
-
-}
-
-.btn-entrarLogin {
-    position: relative;
-    bottom: 51px;
-    left: 30%;
-    width: 169.36px;
-    height: 62.96px;
-    background: #FFFFFF;
-    border-radius: 20px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 30px;
-
-}
-
-.user-form input[type=usuario] {
-    position: relative;
-    top: -20px;
-    background: #FFFFFF;
-    border-radius: 60px;
-    width: 430.74px;
-    height: 40.47px;
-    padding-left: 20px;
-    /* Adiciona padding à esquerda */
-    box-sizing: border-box;
-    /* Mantém a largura do elemento mesmo com padding */
-}
-
-
-
-.senha-form input[type=senha] {
-    position: relative;
-    top: -20px;
-    background: #FFFFFF;
-    border-radius: 60px;
-    width: 430.74px;
-    padding-left: 20px;
-    /* Adiciona padding à esquerda */
-    box-sizing: border-box;
-    /* Mantém a largura do elemento mesmo com padding */
-    height: 40.47px;
-}
-
-
-
-.btn-entrarLogin:active {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    opacity: 0.8;
-}
-
 .title-pai {
     position: relative;
-    left: 112%;
+    padding: 20px;
+    z-index: 1;
+
 }
+
 /*
 O código abaixo define as propriedades de estilo de fonte para os elementos que correspondem.
     o filho span dentro de um elemento com classe "title1" ou "title2*/
@@ -143,25 +16,275 @@ O código abaixo define as propriedades de estilo de fonte para os elementos que
 .title2 span:nth-child(6),
 .title2 span:nth-child(7),
 .title2 span:nth-child(8) {
-    font-family: 'Jacques Francois Shadow';
+    font-family: 'Jacques Francois Shadow', cursive;
     font-style: normal;
     font-weight: 400;
-    font-size: 125px;
-    line-height: 165px;
-
+    font-size: 110px;
+    line-height: 10px;
     color: #EB3743;
+    letter-spacing: 5px;
+
 }
 
 .title1 span:nth-child(2),
 .title1 span:nth-child(4),
 .title2 span:nth-child(3),
 .title2 span:nth-child(5) {
-    font-family: 'Londrina Solid';
+    font-family: 'Londrina Solid', cursive;
     font-style: normal;
     font-weight: 400;
-    font-size: 140px;
-    line-height: 166px;
+    font-size: 120px;
     width: 120px;
     height: 145px;
     color: rgba(235, 55, 67, 0.93);
+    letter-spacing: 20px;
+
+}
+
+.title2 {
+    transition: all 0.3s ease;
+    position: relative;
+    margin-left: 20%;
+    margin-top: -5%;
+}
+
+
+
+/* Estilos para telas menores que 768px de largura */
+@media (max-width: 768px) {
+
+    .title1 span:nth-child(1),
+    .title1 span:nth-child(3),
+    .title2 span:nth-child(1),
+    .title2 span:nth-child(2),
+    .title2 span:nth-child(4),
+    .title2 span:nth-child(6),
+    .title2 span:nth-child(7),
+    .title2 span:nth-child(8) {
+        font-size: 40px;
+        line-height: 6px;
+        letter-spacing: 3px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .title1 span:nth-child(2),
+    .title1 span:nth-child(4),
+    .title2 span:nth-child(3),
+    .title2 span:nth-child(5) {
+        font-size: 40px;
+        width: 80px;
+        height: 97px;
+        letter-spacing: 10px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .title1 {
+        transition: all 0.5s ease-in-out;
+    }
+
+    .title2 {
+        margin-left: 40%;
+        margin-top: -2%;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+/* Estilos para telas maiores ou iguais a 768px de largura */
+@media (min-width: 768px) {
+
+    .title1 span:nth-child(1),
+    .title1 span:nth-child(3),
+    .title2 span:nth-child(1),
+    .title2 span:nth-child(2),
+    .title2 span:nth-child(4),
+    .title2 span:nth-child(6),
+    .title2 span:nth-child(7),
+    .title2 span:nth-child(8) {
+        font-size: 110px;
+        line-height: 10px;
+        letter-spacing: 5px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .title1 span:nth-child(2),
+    .title1 span:nth-child(4),
+    .title2 span:nth-child(3),
+    .title2 span:nth-child(5) {
+        font-size: 120px;
+        width: 120px;
+        height: 145px;
+        letter-spacing: 20px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .title2 {
+        margin-left: 20%;
+        margin-top: -5%;
+        transition: all 0.5s ease-in-out;
+
+    }
+
+}
+
+@media (max-width: 1100px) {
+
+    .title1,
+    .title2 {
+        font-size: 5vw;
+        /* define o tamanho da fonte em porcentagem em relação à largura da janela do navegador */
+        margin-left: -7%;
+
+    }
+
+    .title2 {
+        margin-left: 10%;
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+@media (max-width: 860px) {
+
+    .title1,
+    .title2 {
+        font-size: 5vw;
+        /* define o tamanho da fonte em porcentagem em relação à largura da janela do navegador */
+
+    }
+}
+
+.img-refri {
+
+    /* Define a posição absoluta do elemento em relação à janela do navegador */
+    position: relative;
+    /* Define a largura máxima do elemento como 100% do elemento pai */
+    max-width: 100%;
+    margin: 0 auto;
+    /* Define a imagem de fundo do elemento */
+    background-image: url(../util/refri.png);
+    /* Define o tamanho da imagem de fundo do elemento como 95% da largura do elemento */
+    background-size: 100%;
+    /* Define que a imagem de fundo do elemento não deve ser repetida */
+    background-repeat: no-repeat;
+    width: 28vw;
+    height: 40vw;
+    right: 55%;
+    margin-top: -12%;
+
+    
+}
+
+ @media (max-width: 1100px) {
+    .img-refri {
+        right: 40%;
+        margin-top: 0%;
+        transition: all 0.5s ease-in-out;
+    }
+
+}
+/*
+@media (max-width: 860px) {
+    .img-refri {
+        margin-top: 0%;
+        right: 35%;
+        transition: all 0.5s ease-in-out;
+
+    }
+}
+
+@media (max-width: 768px) {
+
+    .img-refri {
+        background-size: 70%;
+        transition: all 0.5s ease-in-out;
+
+    }
+
+} */
+
+.login-form,
+.senha-form,
+.usuario-form {
+    position: absolute;
+}
+
+h1 {
+    position: relative;
+    font-family: 'Inter';
+    font-style: italic;
+    font-size: 2.9vw;
+    font-weight: 689;
+    text-align: center;
+    color: #400F12;
+    font-variation-settings: 'slnt' -10;
+    top: -4%;
+}
+
+
+.senha-form, .user-form {
+    position: relative;
+    padding: 1.5%;
+    top: -1%;
+}
+
+.login-form {
+
+    background: rgba(237, 55, 68, 0.22);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    border-radius: 60px;
+    left: 55%;
+    margin-top: -32%;
+    width: 32vw;
+    height: 22vw;
+    
+}
+
+
+.user-form input[type=usuario], .senha-form input[type=password]  {
+
+    background: #FFFFFF;
+    border-radius: 1vw;
+    height: 2.2vw;
+    padding-left: 1.2vw;
+    padding-right: 1.2vw;
+    /* Adiciona padding à esquerda */
+    box-sizing: border-box;
+    /* Mantém a largura do elemento mesmo com padding */
+    border: 2px solid #FFFFFF;
+    width:100% ; 
+}
+
+.btn-entrarLogin {
+    position: absolute; /* or position: fixed; */
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 8%;
+    background: #FFFFFF;
+    border-radius: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6vw;
+    border: 2px solid #FFFFFF;
+    width: 10vw;
+    height: 3.3vw;
+}
+.label-email,
+.label-senha {
+    position: relative;
+    left: 2.5%;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 550;
+    font-size: 1.6vw;
+    color: #000000;
+    font-variation-settings: 'slnt' -10;
+    bottom: 0.2em;
+
+}
+
+
+.btn-entrarLogin:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    opacity: 0.8;
 }
