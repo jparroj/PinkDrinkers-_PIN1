@@ -1,20 +1,15 @@
-* {
-  margin: 0px;
-  padding: 0px;
+
+.img-refri {
+  max-width: 100%;
+  height: 744px;
+
+
 }
 
+.img-refri img {
+  width: 100%;
+  height: 100%;
 
-header {
-  position: relative;
-  width: 100vw;
-  display: flex;
-  text-align: center;
-  padding-bottom: 1em;
-  align-items: center;
-  height: 100px;
-  border-bottom: 1px solid #DC4F22;
-  box-sizing: border-box;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -159,25 +154,7 @@ header {
   background: rgba(237, 55, 68, 0.35);
 }
 
-.img-refrigerante {
-  /* Define a posição absoluta do elemento em relação à janela do navegador */
-  position: relative;
-  /* Define a largura máxima do elemento como 100% do elemento pai */
-  max-width: 100%;
-  margin: 0 auto;
-  /* Define a imagem de fundo do elemento */
-  background-image: url(../util/refri1.png);
-  /* Define o tamanho da imagem de fundo do elemento como 95% da largura do elemento */
-  background-size: 60%;
-  /* Define que a imagem de fundo do elemento não deve ser repetida */
-  background-repeat: no-repeat;
-  width: 28vw;
-  height: 40vw;
-  right: -22%;
-  margin-top: -22%;
-  transition: all 0.5s ease-in-out;
 
-}
 
 .destaque {
   color: rgba(235, 55, 67, 1);

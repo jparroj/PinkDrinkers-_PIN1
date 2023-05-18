@@ -1,7 +1,7 @@
 
 import './HomePageStyle.css';
 import { useNavigate } from 'react-router-dom';
-
+import refriImage from '../util/refri.png';
 import Header from '../Header/Header';
 
 
@@ -34,13 +34,14 @@ function HomePage({ isAuthenticated }) {
 
 
     const gerenciarEstoqueMenu = async (e) => {
-        e.preventDefault();   
+        e.preventDefault();
         navigate('/cadastro-produto');
     };
 
     return (
         <div className="home-wrap">
-             <Header/>
+            <Header />
+
             <div className="title-home">
                 <div className="titleHome1">
                     <span>
@@ -55,16 +56,20 @@ function HomePage({ isAuthenticated }) {
                     <span class="destaque">você!</span>
                 </div>
             </div>
-            <div className="buttons">
-                <input type="button" value="GERENCIAR MÁQUINAS" className="maquinas-button" 
-                onClick={(e) =>gerenciarMaqMenu(e)}/>
-                <input type="button" value="RELATÓRIOS" className="relatorios-button"  
-                onClick={(e) =>relatorioMenu(e)}/>
-                <input type="button" value="GERENCIAR ESTOQUE" className="estoque-button" 
-                onClick={(e) =>gerenciarEstoqueMenu(e)}/>
+            <div className="area-btn-img">
+                <div className='img-refri'>
+                    <img src={refriImage} alt="Refri" />
+                </div>
+                <div className="buttons">
+                    <input type="button" value="GERENCIAR MÁQUINAS" className="maquinas-button"
+                        onClick={(e) => gerenciarMaqMenu(e)} />
+                    <input type="button" value="RELATÓRIOS" className="relatorios-button"
+                        onClick={(e) => relatorioMenu(e)} />
+                    <input type="button" value="GERENCIAR ESTOQUE" className="estoque-button"
+                        onClick={(e) => gerenciarEstoqueMenu(e)} />
+                </div>
             </div>
 
-            <div className='img-refrigerante' />
         </div>
     );
 }
