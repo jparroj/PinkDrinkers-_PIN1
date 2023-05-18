@@ -1,5 +1,3 @@
-
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,8 +9,80 @@ datasource db {
 
 // Define o modelo do usuário
 model User {
-  id       Int      @id @default(autoincrement())
+  id       Int     @id @default(autoincrement())
   name     String?
-  email    String   @unique
+  email    String  @unique
   password String
 }
+
+model Bebida {
+  id_bebida    Int          @id @default(autoincrement())
+  nome_bebida  String
+  tipo_bebida  String
+  valor_bebida Float
+  item_estoque Int          @unique
+  Item_estoque Item_estoque @relation(fields: [item_estoque], references: [id_itemestoque])
+  item_totem   Int          @unique
+  Item_totem   Item_totem   @relation(fields: [item_totem], references: [id_itemtotem])
+}
+
+model Funcionario {
+  id_funcionario    Int     @id @default(autoincrement())
+  nome_funcionario  String?
+  login_funcionario String  @unique
+  senha_funcionario String
+}
+
+model Reposicao {
+  id_reposicao         Int           @id @default(autoincrement())
+  id_totem             Totem?
+  id_itemestoque       Item_estoque?
+  status_reposicao     String
+  observacao_reposicao String?
+  data_reposicao       DateTime
+}
+
+model Venda {
+  id_venda     Int         @id @default(autoincrement())
+  id_itemtotem Item_totem?
+  id_totem     Totem?
+  
+  valor_venda  Float
+  data_venda   DateTime
+}
+
+model Totem {
+  id_totem   Int        @id @default(autoincrement())
+  id_maquina Maquina?
+  nome_totem String
+  reposicao  Int        @unique
+  Reposicao  Reposicao  @relation(fields: [reposicao], references: [id_reposicao])
+  item_totem Int        @unique
+  Item_totem Item_totem @relation(fields: [item_totem], references: [id_itemtotem])
+  venda      Int        @unique
+  Venda      Venda      @relation(fields: [venda], references: [id_venda])
+}
+
+model Maquina {
+  id_maquina     Int    @id @default(autoincrement())
+  status_maquina String
+  local_maquina  String
+  totem          Int    @unique
+  Totem          Totem  @relation(fields: [totem], references: [id_totem])
+}
+
+model Item_estoque {
+  id_itemestoque Int       @id @default(autoincrement())
+  id_bebida      Bebida?
+  reposicao      Int       @unique
+  Reposicao      Reposicao @relation(fields: [reposicao], references: [id_reposicao])
+}
+
+model Item_totem {
+  id_itemtotem Int     @id @default(autoincrement())
+  id_bebida    Bebida?
+  id_totem     Totem?
+  venda        Int     @unique
+  Venda        Venda   @relation(fields: [venda], references: [id_venda])
+}
+

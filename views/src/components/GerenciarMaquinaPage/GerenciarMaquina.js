@@ -8,7 +8,7 @@ function GerenciarMaquina() {
   return (
     <div>
       <Header />
-      // o conteúdo da sua página aqui
+      // o conteúdo da sua página aqui, teste teste teste teste
     </div>
   );
 }
