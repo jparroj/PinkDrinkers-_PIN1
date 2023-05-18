@@ -106,7 +106,7 @@ function Login() {
                                         <div className='label-email'>
                                             <label htmlFor="email">USUÁRIO</label>
                                         </div>
-
+                                        <div className='input-user'>
                                         <input type="usuario"
                                             name="usuario"
                                             placeholder="Informe seu Email"
@@ -117,17 +117,19 @@ function Login() {
                                                 //chamada da função setEmail e atualiza o state email
                                                 setEmail(e.target.value)} />
                                     </div>
-
+                                    </div>
+                                 
                                     <div className='senha-form'>
                                         <div className='label-senha'>
                                             <label htmlFor="senha">SENHA</label>
                                         </div>
-
+                                        <div className='input-password'>
                                         <input type="password"
                                             name="senha"
                                             placeholder="Informe sua senha"
                                             required
                                             onChange={(e) => setPassword(e.target.value)} />
+                                    </div>
                                     </div>
                                 </div>
                                 <div className='area-btn-form'>
