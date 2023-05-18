@@ -1,15 +1,7 @@
-.title-cadastro-voltar {
-text-decoration: none;
-padding: 1em;
-box-sizing: border-box;
-font-size: 30px;
+.cadastro-produto-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
 }
 
-.confirmar-button{
-    position: relative;
-    width: 250px;
-}
-
-.label-categoria{
-    padding: 0.5em;
-}

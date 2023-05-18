@@ -1,290 +1,317 @@
-.title-pai {
-    position: relative;
-    padding: 20px;
-    z-index: 1;
+ .login-form-wrap {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     max-height: auto;
+     margin-top: -5rem;
+     width: 100vw;
+     height: 100vh;
 
-}
+ }
 
-/*
+
+
+ @media screen and (min-width: 1281px) {
+
+     .login-container {
+         margin: 0 auto;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-direction: column;
+         width: 100%;
+         height: 150%; 
+         
+     }
+     .login-form-wrap {
+        margin-top: -3rem;
+    }
+     
+ }
+
+ /* Desktops: (min-width: 1281px)
+ Laptops, desktops: (min-width: 1025px) and (max-width: 1280px
+ Tablets, ipads: (min-width: 768px) and (max-width: 1024px
+ Tablets de baixa resolução, celulares: (min-width: 481px) and (max- width: 767px) */
+
+ @media screen and (min-width: 1025px) and (max-width: 1280px) {
+     .login-container {
+         width: 100%;
+         margin: 1em 2em;
+         transition: all 0.5 ease;
+
+     }
+ }
+
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+     .login-container {
+         width: 100%;
+         margin: 1rem 2rem;
+         margin-top: 14rem;
+         transition: all 0.5s ease;
+     }
+ }
+
+ .img-refri {
+     max-width: 100%;
+     height: 744px;
+
+
+ }
+
+ .img-refri img {
+     width: 100%;
+     height: 100%;
+
+
+ }
+
+ .form-area {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 15rem;
+     width: 100%;
+     height: 547px;
+     transition: all 0.3s ease;
+ }
+
+ @media (max-width: 1024px) {
+     .form-area {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 16px;
+         transition: all 0.3s ease;
+         width: 100%;
+         height: 100%;
+     }
+ }
+
+ @media screen and (min-width: 1025px) and (max-width: 1280px) {
+     .form-area {
+         gap: 5em;
+         transition: all 0.3s ease;
+     }
+ }
+
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+
+     .form-area {
+         gap: 2em;
+         transition: all 0.3s ease;
+
+     }
+
+ }
+
+
+
+
+
+ .title-pai {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     padding: 0px;
+     box-sizing: border-box;
+     width: 100%;
+     height: auto;
+     z-index: 1;
+ }
+
+
+ /*
 O código abaixo define as propriedades de estilo de fonte para os elementos que correspondem.
     o filho span dentro de um elemento com classe "title1" ou "title2*/
-.title1 span:nth-child(1),
-.title1 span:nth-child(3),
-.title2 span:nth-child(1),
-.title2 span:nth-child(2),
-.title2 span:nth-child(4),
-.title2 span:nth-child(6),
-.title2 span:nth-child(7),
-.title2 span:nth-child(8) {
-    font-family: 'Jacques Francois Shadow', cursive;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 110px;
-    line-height: 10px;
-    color: #EB3743;
-    letter-spacing: 5px;
+ .title1 span:nth-child(1),
+ .title1 span:nth-child(3),
+ .title2 span:nth-child(1),
+ .title2 span:nth-child(2),
+ .title2 span:nth-child(4),
+ .title2 span:nth-child(6),
+ .title2 span:nth-child(7),
+ .title2 span:nth-child(8) {
+     font-family: 'Jacques Francois Shadow', cursive;
+     font-style: normal;
+     font-weight: 400;
+     font-size: 110px;
+     color: #EB3743;
+     letter-spacing: 10px;
+ }
 
-}
+ .title1 span:nth-child(2),
+ .title1 span:nth-child(4),
+ .title2 span:nth-child(3),
+ .title2 span:nth-child(5) {
+     font-family: 'Londrina Solid', cursive;
+     font-style: normal;
+     font-weight: 400;
+     font-size: 120px;
+     color: rgba(235, 55, 67, 0.93);
+     letter-spacing: 10px;
 
-.title1 span:nth-child(2),
-.title1 span:nth-child(4),
-.title2 span:nth-child(3),
-.title2 span:nth-child(5) {
-    font-family: 'Londrina Solid', cursive;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 120px;
-    width: 120px;
-    height: 145px;
-    color: rgba(235, 55, 67, 0.93);
-    letter-spacing: 20px;
+ }
 
-}
+ .title1 {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: all 0.3s ease;
+     margin-right: 25%;
+     width: 100%;
+     height: auto;
+     margin-bottom: -10px;
+     max-height: 8rem;
 
-.title2 {
-    transition: all 0.3s ease;
-    position: relative;
-    margin-left: 20%;
-    margin-top: -5%;
-}
+ }
 
+ .title2 {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: all 0.3s ease;
+     margin-left: 10%;
+     width: 100%;
+     height: auto;
+     max-height: 8rem;
 
-
-/* Estilos para telas menores que 768px de largura */
-@media (max-width: 768px) {
-
-    .title1 span:nth-child(1),
-    .title1 span:nth-child(3),
-    .title2 span:nth-child(1),
-    .title2 span:nth-child(2),
-    .title2 span:nth-child(4),
-    .title2 span:nth-child(6),
-    .title2 span:nth-child(7),
-    .title2 span:nth-child(8) {
-        font-size: 40px;
-        line-height: 6px;
-        letter-spacing: 3px;
-        transition: all 0.5s ease-in-out;
-    }
-
-    .title1 span:nth-child(2),
-    .title1 span:nth-child(4),
-    .title2 span:nth-child(3),
-    .title2 span:nth-child(5) {
-        font-size: 40px;
-        width: 80px;
-        height: 97px;
-        letter-spacing: 10px;
-        transition: all 0.5s ease-in-out;
-    }
-
-    .title1 {
-        transition: all 0.5s ease-in-out;
-    }
-
-    .title2 {
-        margin-left: 40%;
-        margin-top: -2%;
-        transition: all 0.5s ease-in-out;
-    }
-}
-
-/* Estilos para telas maiores ou iguais a 768px de largura */
-@media (min-width: 768px) {
-
-    .title1 span:nth-child(1),
-    .title1 span:nth-child(3),
-    .title2 span:nth-child(1),
-    .title2 span:nth-child(2),
-    .title2 span:nth-child(4),
-    .title2 span:nth-child(6),
-    .title2 span:nth-child(7),
-    .title2 span:nth-child(8) {
-        font-size: 110px;
-        line-height: 10px;
-        letter-spacing: 5px;
-        transition: all 0.5s ease-in-out;
-    }
-
-    .title1 span:nth-child(2),
-    .title1 span:nth-child(4),
-    .title2 span:nth-child(3),
-    .title2 span:nth-child(5) {
-        font-size: 120px;
-        width: 120px;
-        height: 145px;
-        letter-spacing: 20px;
-        transition: all 0.5s ease-in-out;
-    }
-
-    .title2 {
-        margin-left: 20%;
-        margin-top: -5%;
-        transition: all 0.5s ease-in-out;
-
-    }
-
-}
-
-@media (max-width: 1100px) {
-
-    .title1,
-    .title2 {
-        font-size: 5vw;
-        /* define o tamanho da fonte em porcentagem em relação à largura da janela do navegador */
-        margin-left: -7%;
-
-    }
-
-    .title2 {
-        margin-left: 10%;
-        transition: all 0.5s ease-in-out;
-    }
-}
-
-@media (max-width: 860px) {
-
-    .title1,
-    .title2 {
-        font-size: 5vw;
-        /* define o tamanho da fonte em porcentagem em relação à largura da janela do navegador */
-
-    }
-}
-
-.img-refri {
-
-    /* Define a posição absoluta do elemento em relação à janela do navegador */
-    position: relative;
-    /* Define a largura máxima do elemento como 100% do elemento pai */
-    max-width: 100%;
-    margin: 0 auto;
-    /* Define a imagem de fundo do elemento */
-    background-image: url(../util/refri.png);
-    /* Define o tamanho da imagem de fundo do elemento como 95% da largura do elemento */
-    background-size: 100%;
-    /* Define que a imagem de fundo do elemento não deve ser repetida */
-    background-repeat: no-repeat;
-    width: 28vw;
-    height: 40vw;
-    right: 55%;
-    margin-top: -12%;
-
-    
-}
-
- @media (max-width: 1100px) {
-    .img-refri {
-        right: 40%;
-        margin-top: 0%;
-        transition: all 0.5s ease-in-out;
-    }
-
-}
-/*
-@media (max-width: 860px) {
-    .img-refri {
-        margin-top: 0%;
-        right: 35%;
-        transition: all 0.5s ease-in-out;
-
-    }
-}
-
-@media (max-width: 768px) {
-
-    .img-refri {
-        background-size: 70%;
-        transition: all 0.5s ease-in-out;
-
-    }
-
-} */
-
-.login-form,
-.senha-form,
-.usuario-form {
-    position: absolute;
-}
-
-h1 {
-    position: relative;
-    font-family: 'Inter';
-    font-style: italic;
-    font-size: 2.9vw;
-    font-weight: 689;
-    text-align: center;
-    color: #400F12;
-    font-variation-settings: 'slnt' -10;
-    top: -4%;
-}
+ }
 
 
-.senha-form, .user-form {
-    position: relative;
-    padding: 1.5%;
-    top: -1%;
-}
 
-.login-form {
+ .login-form {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     background: rgba(237, 55, 68, 0.22);
+     padding: 1.375rem 3.125rem 2.625rem;
+     box-sizing: border-box;
+     border-radius: 60px;
+     width: 34.75rem;
+     height: 25.375rem;
+     gap: 2px;
+ }
 
-    background: rgba(237, 55, 68, 0.22);
-    padding: 20px 30px;
-    box-sizing: border-box;
-    border-radius: 60px;
-    left: 55%;
-    margin-top: -32%;
-    width: 32vw;
-    height: 22vw;
-    
-}
+ @media screen and (min-width: 1025px) and (max-width: 1280px) {
+     .login-form {
 
+         margin-right: 1rem;
+         transition: all 0.3s ease;
 
-.user-form input[type=usuario], .senha-form input[type=password]  {
+     }
 
-    background: #FFFFFF;
-    border-radius: 1vw;
-    height: 2.2vw;
-    padding-left: 1.2vw;
-    padding-right: 1.2vw;
-    /* Adiciona padding à esquerda */
-    box-sizing: border-box;
-    /* Mantém a largura do elemento mesmo com padding */
-    border: 2px solid #FFFFFF;
-    width:100% ; 
-}
+     .login-form {}
 
-.btn-entrarLogin {
-    position: absolute; /* or position: fixed; */
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 8%;
-    background: #FFFFFF;
-    border-radius: 20px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.6vw;
-    border: 2px solid #FFFFFF;
-    width: 10vw;
-    height: 3.3vw;
-}
-.label-email,
-.label-senha {
-    position: relative;
-    left: 2.5%;
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 550;
-    font-size: 1.6vw;
-    color: #000000;
-    font-variation-settings: 'slnt' -10;
-    bottom: 0.2em;
+ }
 
-}
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+     .login-form {
+
+         margin-right: 1rem;
+         transition: all 0.3s ease;
+         max-width: 50%;
+
+     }
 
 
-.btn-entrarLogin:active {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    opacity: 0.8;
-}
+ }
+
+ .login-form h1 {
+     padding: 1px;
+     box-sizing: border-box;
+     font-family: 'Inter';
+     font-style: italic;
+     font-weight: 676;
+     font-size: 3.125rem;
+     line-height: 61px;
+     text-align: center;
+     color: #400F12;
+     font-variation-settings: 'slnt' -10;
+     margin-top: 3px;
+
+
+
+ }
+
+ .area-inputs {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     height: 100%;
+
+ }
+
+ .area-user-senha-form {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     height: 100%;
+     gap: 12px;
+     margin-bottom: 36px;
+
+ }
+
+ .input-user,
+ .input-password {
+     width: 26rem;
+     height: 40.47px;
+ }
+
+ .user-form input[type=usuario],
+ .senha-form input[type=password] {
+
+     background: #FFFFFF;
+     /* Adiciona padding à esquerda */
+     box-sizing: border-box;
+     /* Mantém a largura do elemento mesmo com padding */
+     border: 2px solid #FFFFFF;
+     width: 100%;
+     height: 100%;
+     border-radius: 60px;
+     padding-left: 20px;
+     padding-right: 5px;
+ }
+
+
+
+ .label-email,
+ .label-senha {
+     padding: 0.2em;
+     font-family: 'Inter';
+     font-style: italic;
+     font-weight: 500;
+     font-size: 25px;
+     line-height: 30px;
+     color: #000000;
+     font-variation-settings: 'slnt' -10;
+     margin-bottom: 3.2px;
+
+ }
+
+
+
+ .btn-entrarLogin {
+
+     background: #FFFFFF;
+     border-radius: 20px;
+     font-family: 'Inter';
+     font-style: normal;
+     font-weight: 400;
+     font-size: 1.5625rem;
+     border: 2px solid #FFFFFF;
+     width: 169.36px;
+     height: 62.9px;
+ }
+
+ .btn-entrarLogin:active {
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+     opacity: 0.8;
+ }
