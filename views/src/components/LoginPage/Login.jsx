@@ -75,7 +75,7 @@ function Login() {
 
             {user == null ? (
                 <div className='login-container'>
-                     <div className="title-pai">
+                    <div className="title-pai">
                         <div className="title1">
                             <span>P</span>
                             <span>I</span>
@@ -99,42 +99,43 @@ function Login() {
                         </div>
 
                         <form className='login-form'>
-                        <h1>ACESSO</h1>
+                            <h1>ACESSO</h1>
                             <div className='area-inputs'>
-                          
-                            <div className='user-form'>
-                                <div className='label-email'>
-                                    <label htmlFor="email">USUÁRIO</label>
+                                <div className='area-user-senha-form'>
+                                    <div className='user-form'>
+                                        <div className='label-email'>
+                                            <label htmlFor="email">USUÁRIO</label>
+                                        </div>
+
+                                        <input type="usuario"
+                                            name="usuario"
+                                            placeholder="Informe seu Email"
+                                            //campo obrigatiorio
+                                            required
+                                            //evento que será acionado toda vez que o valor do campo de entrada for alterado
+                                            onChange={(e) =>
+                                                //chamada da função setEmail e atualiza o state email
+                                                setEmail(e.target.value)} />
+                                    </div>
+
+                                    <div className='senha-form'>
+                                        <div className='label-senha'>
+                                            <label htmlFor="senha">SENHA</label>
+                                        </div>
+
+                                        <input type="password"
+                                            name="senha"
+                                            placeholder="Informe sua senha"
+                                            required
+                                            onChange={(e) => setPassword(e.target.value)} />
+                                    </div>
                                 </div>
-
-                                <input type="usuario"
-                                    name="usuario"
-                                    placeholder="Informe seu Email"
-                                    //campo obrigatiorio
-                                    required
-                                    //evento que será acionado toda vez que o valor do campo de entrada for alterado
-                                    onChange={(e) =>
-                                        //chamada da função setEmail e atualiza o state email
-                                        setEmail(e.target.value)} />
-                            </div>
-
-                            <div className='senha-form'>
-                                <div className='label-senha'>
-                                    <label htmlFor="senha">SENHA</label>
+                                <div className='area-btn-form'>
+                                    <button type="entrar"
+                                        className='btn-entrarLogin'
+                                        onClick={(e) =>
+                                            fazerLogin(e)}>ENTRAR</button>
                                 </div>
-
-                                <input type="password"
-                                    name="senha"
-                                    placeholder="Informe sua senha"
-                                    required
-                                    onChange={(e) => setPassword(e.target.value)} />
-                            </div>
-                            <div className='area-btn'>
-                                <button type="entrar"
-                                    className='btn-entrarLogin'
-                                    onClick={(e) =>
-                                        fazerLogin(e)}>ENTRAR</button>
-                            </div>
 
                             </div>
 
@@ -142,8 +143,6 @@ function Login() {
                     </div>
 
 
-
-                    <p>{error}</p>
 
                 </div>
             ) : (

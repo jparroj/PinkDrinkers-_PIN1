@@ -2,42 +2,70 @@
      display: flex;
      align-items: center;
      justify-content: center;
-     min-height: 100vh;
      width: 100%;
-     margin: 10px;
-
+     max-height: auto;
+     margin-top: 2rem;
 
  }
 
+ @media screen and (min-width: 1281px){
+
  .login-container {
+     margin: 0 auto;
      display: flex;
      align-items: center;
      justify-content: center;
      flex-direction: column;
      width: 100%;
      height: 100%;
-     margin-top: -10%;
+
+ }
+ }
+
+ /* Desktops: (min-width: 1281px)
+ Laptops, desktops: (min-width: 1025px) and (max-width: 1280px
+ Tablets, ipads: (min-width: 768px) and (max-width: 1024px
+ Tablets de baixa resolução, celulares: (min-width: 481px) and (max- width: 767px) */
+
+ @media screen and (min-width: 1025px) and (max-width: 1280px) {
+     .login-container {
+         width: 100%;
+         height: 100%;
+         gap: 4.7rem;
+         margin: 1em 2em;
+    
+     }
+ }
+
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+     .login-container {
+         width: 100%;
+         height: 100%;
+         margin: 1em 2em;
+         gap: 4.7rem;
+     }
  }
 
  .img-refri {
+     width: 460px;
+     max-height: 750px;
 
-     width: 547px;
  }
 
  .img-refri img {
-     width: 100%;
+     max-width: 100%;
      height: auto;
+     
  }
 
  .form-area {
      display: flex;
      align-items: center;
      justify-content: center;
-     gap: 248px;
+     gap: 240px;
      width: 100%;
      height: 547px;
-     margin: 0 auto;
-     /* Centralize horizontalmente */
+
 
  }
 
@@ -46,17 +74,27 @@
          display: flex;
          align-items: center;
          justify-content: center;
-         flex-direction: column;
-         gap: 28px;
+         gap: 10px;
+         transition: all 0.3s ease;
+         width: 100%;
+         height: 100%;
      }
  }
 
 
 
- .title-pai {
-     padding: 20px;
-     box-sizing: border-box;
 
+
+ .title-pai {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     padding: 0px;
+     box-sizing: border-box;
+     width: 100%;
+     height: auto;
+     z-index: 1;
  }
 
 
@@ -75,10 +113,8 @@ O código abaixo define as propriedades de estilo de fonte para os elementos que
      font-style: normal;
      font-weight: 400;
      font-size: 110px;
-     line-height: 10px;
      color: #EB3743;
-     letter-spacing: 5px;
-
+     letter-spacing: 10px;
  }
 
  .title1 span:nth-child(2),
@@ -89,18 +125,33 @@ O código abaixo define as propriedades de estilo de fonte para os elementos que
      font-style: normal;
      font-weight: 400;
      font-size: 120px;
-     width: 120px;
-     height: 145px;
      color: rgba(235, 55, 67, 0.93);
-     letter-spacing: 20px;
+     letter-spacing: 10px;
+
+ }
+
+ .title1 {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: all 0.3s ease;
+     margin-right: 25%;
+     width: 100%;
+     height: auto;
+     margin-bottom: -10px;
+     max-height: 8rem;
 
  }
 
  .title2 {
+     display: flex;
+     align-items: center;
+     justify-content: center;
      transition: all 0.3s ease;
-     position: relative;
-     margin-left: 20%;
-     margin-top: -5%;
+     margin-left: 10%;
+     width: 100%;
+     height: auto;
+     max-height: 8rem;
 
  }
 
@@ -115,24 +166,45 @@ O código abaixo define as propriedades de estilo de fonte para os elementos que
      padding: 22px 50px 42px;
      box-sizing: border-box;
      border-radius: 60px;
-     width: 556px;
-     height: 406px;
-
+     width:  34.75rem;
+     height: 25,375rem;
+     gap: 2px;
  }
 
+ @media screen and (min-width: 1025px) and (max-width: 1280px) {
+.login-form{
+    width:  auto;
+    height: auto;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+} 
+}
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .login-form{
+    width:  auto;
+    height: auto;
+    margin-right: 1rem;
+    transition: all 0.3s ease;
+}
+
+}
 
  .login-form h1 {
-
+     padding: 1px;
+     box-sizing: border-box;
      font-family: 'Inter';
      font-style: italic;
      font-weight: 676;
-     font-size: 50px;
+     font-size: 3.125rem;
      line-height: 61px;
      text-align: center;
      color: #400F12;
      font-variation-settings: 'slnt' -10;
-     
+     margin-top: 3px;
+
+
+
  }
 
  .area-inputs {
@@ -140,19 +212,66 @@ O código abaixo define as propriedades de estilo de fonte para os elementos que
      flex-direction: column;
      align-items: center;
      justify-content: center;
-     gap: 17px;
      width: 100%;
-     height: 70%;
+     height: 100%;
+
  }
 
- .user-form input[type=usuario], .senha-form input[type=password]  {
+ .user-form input[type=usuario],
+ .senha-form input[type=password] {
 
-    background: #FFFFFF;
-    /* Adiciona padding à esquerda */
-    box-sizing: border-box;
-    /* Mantém a largura do elemento mesmo com padding */
-    border: 2px solid #FFFFFF;
-    width: 430.74px;
-    height: 40.47px;
-    border-radius: 60px;
+     background: #FFFFFF;
+     /* Adiciona padding à esquerda */
+     box-sizing: border-box;
+     /* Mantém a largura do elemento mesmo com padding */
+     border: 2px solid #FFFFFF;
+     width: 430.74px;
+     height: 40.47px;
+     border-radius: 60px;
+     padding-left: 20px;
+     padding-right: 5px;
+ }
+
+ .label-email,
+ .label-senha {
+     padding: 0.2em;
+     font-family: 'Inter';
+     font-style: italic;
+     font-weight: 500;
+     font-size: 25px;
+     line-height: 30px;
+     color: #000000;
+     font-variation-settings: 'slnt' -10;
+     margin-bottom: 3.2px;
+
+ }
+
+ .area-user-senha-form {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     height: 100%;
+     gap: 12px;
+     margin-bottom: 36px;
+
+ }
+
+ .btn-entrarLogin {
+
+     background: #FFFFFF;
+     border-radius: 20px;
+     font-family: 'Inter';
+     font-style: normal;
+     font-weight: 400;
+     font-size:1.5625rem ;
+     border: 2px solid #FFFFFF;
+     width: 169.36px;
+     height: 62.9px;
+ }
+
+ .btn-entrarLogin:active {
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+     opacity: 0.8;
  }
