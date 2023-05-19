@@ -1,7 +1,7 @@
 
 import './HomePageStyle.css';
 import { useNavigate } from 'react-router-dom';
-import refriImage from '../util/refri.png';
+import refriImage from '../util/refrihome.png';
 import Header from '../Header/Header';
 
 
@@ -57,7 +57,7 @@ function HomePage({ isAuthenticated }) {
                 </div>
             </div>
             <div className="area-btn-img">
-                <div className='img-refri'>
+                <div className='img-refri-home'>
                     <img src={refriImage} alt="Refri" />
                 </div>
                 <div className="buttons">
