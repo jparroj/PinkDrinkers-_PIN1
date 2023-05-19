@@ -1,0 +1,62 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+
+
+  header {
+    position: relative;
+    width: 100vw;
+    display: flex;
+    text-align: center;
+    padding-bottom: 1em;
+    align-items: center;
+    height: 100px;
+    border-bottom: 1px solid #DC4F22;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  
+  }
+
+.titulo-pagina{
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    width: 50%;
+    /* 
+    height: 34px; */
+}
+
+/* .titulo-pagina span{
+    font-family: 'Kaisei Tokumin';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 34px;
+    text-align: center;
+    color: #000000;
+} */
+
+.filtro{
+    display: flex;
+    margin-top: 7rem;
+    margin-top: 3rem;
+    width: 270px;
+    max-height: 61px;
+}
+
+.filtro select{
+    box-sizing: border-box;
+    padding-left: 1rem;
+    width: 100%;
+    height: 100%;
+    background: rgba(237, 55, 68, 0.1);
+    border-radius: 25px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 30px;
+    color: #000000;
+}
+
