@@ -3,7 +3,6 @@
     padding: 0px;
   }
 
-
   header {
     position: relative;
     width: 100vw;
@@ -15,48 +14,75 @@
     border-bottom: 1px solid #DC4F22;
     box-sizing: border-box;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
-  
   }
 
 .titulo-pagina{
     display: flex;
-    margin-top: 2rem;
-    margin-left: 3rem;
-    width: 50%;
-    /* 
-    height: 34px; */
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 100%;
+    height: 2rem;
 }
 
-/* .titulo-pagina span{
+.titulo{
     font-family: 'Kaisei Tokumin';
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 34px;
-    text-align: center;
+    font-size: 30px;
     color: #000000;
-} */
-
-.filtro{
-    display: flex;
-    margin-top: 7rem;
-    margin-top: 3rem;
-    width: 270px;
-    max-height: 61px;
+    text-decoration: none;
 }
 
-.filtro select{
+.addmaquina{
+    text-decoration: none;
     box-sizing: border-box;
-    padding-left: 1rem;
+    padding-left: 2%;
+    padding-top: 0.6%;
+    width: 15%;
+    height: 100%;
+    border-radius: 25px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    background: rgba(72, 231, 115, 0.7);
+}
+
+.filtros{
+    display: flex;
     width: 100%;
+    height: 3rem;
+}
+
+.buscar{
+    box-sizing: border-box;
+    padding-left: 2%;
+    width: 30%;
     height: 100%;
     background: rgba(237, 55, 68, 0.1);
     border-radius: 25px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 300;
-    font-size: 25px;
-    line-height: 30px;
-    color: #000000;
+    font-size: 20px;
+    border: #000000;
 }
 
+.opcao{
+    box-sizing: border-box;
+    padding-left: 2%;
+    width: 20%;
+    height: 100%;
+    background: rgba(237, 55, 68, 0.1);
+    border-radius: 25px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    border: #000000;
+}
+
+.espaco{
+    width: 3%;
+}
