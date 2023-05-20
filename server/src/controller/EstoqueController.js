@@ -22,4 +22,4 @@ exports.createEstoque = async (req, res) => {
       message: 'Erro ao adicionar bebida!'
     });
   }
-};
+}; 
